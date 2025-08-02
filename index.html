@@ -1,1 +1,227 @@
-<h1>Welcome to My Portfolio</h1>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Engr. Arvin S. Garabiles – ECE | Security Systems Specialist</title>
+  <meta name="description" content="Portfolio & résumé of Arvin S. Garabiles,ECE– Electronics Engineer, CCTV & Network-Security Systems Specialist">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <!-- AOS (scroll reveal) -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <style>
+    :root{
+      --bg:#f5f6fa;
+      --bg2:#ffffff;
+      --text:#2c2c54;
+      --accent:#0097e6;
+      --radius:6px;
+      --shadow:0 4px 12px rgba(0,0,0,.08);
+    }
+    [data-theme="dark"]{
+      --bg:#1e1e2f;
+      --bg2:#27293d;
+      --text:#d4d4e6;
+      --accent:#00a8ff;
+    }
+    *{margin:0;padding:0;box-sizing:border-box}
+    body{font-family:'Inter',sans-serif;background:var(--bg);color:var(--text);line-height:1.6;transition:.3s}
+    section{padding:100px 7%}
+    h1,h2,h3{font-weight:600}
+    .btn{background:var(--accent);color:#fff;padding:.8rem 1.8rem;border:none;border-radius:var(--radius);cursor:pointer;font-size:.95rem;transition:.3s}
+    .btn:hover{transform:translateY(-2px);box-shadow:var(--shadow)}
+    nav{position:fixed;top:0;left:0;width:100%;background:var(--bg2);box-shadow:var(--shadow);z-index:1000;display:flex;justify-content:space-between;align-items:center;padding:.8rem 7%}
+    nav .logo{font-weight:600;font-size:1.2rem}
+    nav ul{display:flex;gap:1.8rem}
+    nav li{list-style:none}
+    .theme-toggle{background:none;border:none;font-size:1.3rem;color:var(--text);cursor:pointer;margin-left:1rem}
+    .hamburger{display:none;font-size:1.5rem;background:none;border:none;color:var(--text)}
+    @media(max-width:768px){
+      nav ul{position:absolute;right:0;top:60px;flex-direction:column;background:var(--bg2);width:200px;transform:translateX(100%);transition:.3s;box-shadow:var(--shadow)}
+      nav ul.open{transform:translateX(0)}
+      .hamburger{display:block}
+    }
+    /* HERO */
+    #hero{height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;background:url('https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1350&q=80') center/cover no-repeat;color:#fff;position:relative}
+    #hero::before{content:'';position:absolute;inset:0;background:rgba(0,0,0,.6)}
+    .hero-content{position:relative}
+    .hero-content h1{font-size:2.8rem;margin-bottom:.5rem}
+    .hero-content p{font-size:1.2rem;margin-bottom:1.5rem}
+    /* ABOUT */
+    #about{display:flex;gap:3rem;flex-wrap:wrap;align-items:center}
+    #about img{width:260px;border-radius:var(--radius);box-shadow:var(--shadow)}
+    /* PROJECTS */
+    .projects-grid{display:grid;gap:2rem;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+    .card{background:var(--bg2);border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);transition:.3s}
+    .card:hover{transform:translateY(-4px)}
+    .card img{width:100%;height:180px;object-fit:cover}
+    .card-body{padding:1rem}
+    /* TIMELINE */
+    .timeline{position:relative;margin:2rem 0;padding-left:2rem;border-left:2px solid var(--accent)}
+    .timeline-item{position:relative;margin-bottom:2rem}
+    .timeline-item::before{content:'';position:absolute;left:-2.5rem;top:.3rem;width:1rem;height:1rem;background:var(--accent);border-radius:50%}
+    /* CONTACT */
+    form{max-width:600px;margin:auto;display:flex;flex-direction:column;gap:1rem}
+    input,textarea{padding:.8rem;border-radius:var(--radius);border:1px solid #ccc;background:var(--bg2);color:var(--text)}
+    footer{text-align:center;padding:2rem 0;font-size:.85rem;color:#888}
+  </style>
+</head>
+<body>
+
+<!-- ========= NAV ========= -->
+<nav>
+  <div class="logo">Arvin<span style="color:var(--accent)">Garabiles,ECE</span></div>
+  <ul id="nav-links">
+    <li><a href="#hero">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#resume">Résumé</a></li>
+    <li><a href="#contact">Contact</a></li>
+    <li><a href="resume.pdf" class="btn" download>Download CV</a></li>
+  </ul>
+  <button class="hamburger" id="hamburger"><i class="fas fa-bars"></i></button>
+  <button class="theme-toggle" id="theme-toggle"><i class="fas fa-moon"></i></button>
+</nav>
+
+<!-- ========= HERO ========= -->
+<section id="hero">
+  <div class="hero-content" data-aos="fade-up">
+    <h1>Arvin S. Garabiles,ECE</h1>
+    <p>Electronics Engineer| Security Systems Specialist</p>
+    <a href="#contact" class="btn">Get In Touch</a>
+  </div>
+</section>
+
+<!-- ========= ABOUT ========= -->
+<section id="about">
+  <div data-aos="fade-right">
+    <img src="https://i.pravatar.cc/400?img=3" alt="Arvin Garabiles,ECE">
+  </div>
+  <div data-aos="fade-left">
+    <h2>About Me</h2>
+    <p>
+      I’m a Board Certified Electronics Engineer with 2 decades of hands-on experience in designing, installing, and commissioning large-scale <strong>CCTV, access-control, and structured-cabling systems</strong> across commercial, residential, and industrial sites.
+    </p>
+    <p>
+      My core expertise: IP-camera networks (Dahua, Hikvision), PoE switch configuration, Gigabit backbones, and project management from rough-in to client hand-over.
+    </p>
+  </div>
+</section>
+
+<!-- ========= PROJECTS ========= -->
+<section id="projects">
+  <h2 data-aos="fade-up">Featured Projects</h2>
+
+  <div class="projects-grid">
+    <!-- UCM Makati -->
+    <div class="card" data-aos="zoom-in">
+      <img src="https://images.unsplash.com/photo-1581833971358-2c8b550f87b3?auto=format&fit=crop&w=800&q=60" alt="UCM Makati">
+      <div class="card-body">
+        <h3>UCM Makati IP-Camera Upgrade</h3>
+        <p><strong>Jun 2025 – Present</strong></p>
+        <p>62-camera Hikvision system with redundant NVRs, managed Gigabit core switch, and dedicated PoE edge switches.</p>
+      </div>
+    </div>
+
+    <!-- Unilogix & Tabacalera -->
+    <div class="card" data-aos="zoom-in" data-aos-delay="100">
+      <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=800&q=60" alt="">
+      <div class="card-body">
+        <h3>Unilogix & Tabacalera CCTV</h3>
+        <p>192-node IP-camera system with redundant NVRs and PoE+ switches.</p>
+      </div>
+    </div>
+
+    <!-- Summit One Tower -->
+    <div class="card" data-aos="zoom-in" data-aos-delay="200">
+      <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?auto=format&fit=crop&w=800&q=60" alt="">
+      <div class="card-body">
+        <h3>Summit One Tower</h3>
+        <p>128-camera Dahua setup, Gantt-based scheduling, full user training & turnover.</p>
+      </div>
+    </div>
+
+    <!-- Le Triomphe -->
+    <div class="card" data-aos="zoom-in" data-aos-delay="300">
+      <img src="https://images.unsplash.com/photo-1560472354-b33ff0c44a43?auto=format&fit=crop&w=800&q=60" alt="">
+      <div class="card-body">
+        <h3>Le Triomphe Condominium</h3>
+        <p>32-camera integration with IT & security departments; commissioning reports.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ========= RÉSUMÉ ========= -->
+<section id="resume">
+  <h2 data-aos="fade-up">Résumé</h2>
+
+  <h3 data-aos="fade-up">Education</h3>
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-up">
+      <h4>B.S. Electronics & Communications Engineering</h4>
+      <p>Mapua Institute of Technology</p>
+    </div>
+  </div>
+
+  <h3 data-aos="fade-up">Professional Experience</h3>
+  <div class="timeline">
+    <div class="timeline-item" data-aos="fade-up">
+      <h4>Project Engineer / Commissioning Engineer</h4>
+      <p>Multiple sites (UCM Makati, Unilogix, Le Triomphe, Summit One Tower) — 2018 to Present</p>
+      <ul>
+        <li>Designed & commissioned 400+ IP-camera nodes across 15 sites</li>
+        <li>Managed teams of 3-8 technicians; created Gantt charts & weekly reports</li>
+        <li>Ensured compliance with Electronics Building Code, National Building Codes of the Philippines & client Specifications</li>
+      </ul>
+    </div>
+  </div>
+
+  <h3 data-aos="fade-up">Certifications</h3>
+  <ul>
+    <li>Dahua Certified Technical Partner</li>
+    <li>Hikvision Certified Security Associate</li>
+    <li>Board Certified Electronics Engineer</li>
+  </ul>
+</section>
+
+<!-- ========= CONTACT ========= -->
+<section id="contact">
+  <h2 data-aos="fade-up">Contact Me</h2>
+  <form data-aos="fade-up" action="https://formspree.io/f/xkgzrqob" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="_replyto" placeholder="Your Email" required>
+    <textarea name="message" rows="5" placeholder="Write something..." required></textarea>
+    <button class="btn" type="submit">Send Message</button>
+  </form>
+</section>
+
+<footer>
+  &copy; <span id="year"></span> Engr. Arvin S. Garabiles. All rights reserved.
+</footer>
+
+<!-- Scripts -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init({offset:120,duration:600});
+
+  // Dark / light mode
+  const toggle=document.getElementById('theme-toggle');
+  const body=document.body;
+  toggle.addEventListener('click',()=>{
+    body.dataset.theme=body.dataset.theme==='dark'?'light':'dark';
+    toggle.innerHTML=body.dataset.theme==='dark'?'<i class="fas fa-sun"></i>':'<i class="fas fa-moon"></i>'
+  });
+
+  // Mobile nav
+  const hamburger=document.getElementById('hamburger');
+  const navLinks=document.getElementById('nav-links');
+  hamburger.addEventListener('click',()=>navLinks.classList.toggle('open'));
+
+  // Year
+  document.getElementById('year').textContent=new Date().getFullYear();
+</script>
+</body>
+</html>
